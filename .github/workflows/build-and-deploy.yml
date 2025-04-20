@@ -35,6 +35,8 @@ jobs:
         with:
           node-version: lts/*
           cache: 'npm'
+      - name: Prevent Legacy SSL Error
+        run: echo "NODE_OPTIONS=--openssl-legacy-provider" >> $GITHUB_ENV
       - name: Install dependencies
         run: npm ci
       - name: Build
