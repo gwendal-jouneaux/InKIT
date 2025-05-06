@@ -201,6 +201,7 @@ export default {
             }
           }
         });
+      this.$emit("update-tasks");
       alert(nbArchived + " tasks archived");
     },
   },
